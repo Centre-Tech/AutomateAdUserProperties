@@ -32,8 +32,8 @@ $repoURL = 'https://raw.githubusercontent.com/Centre-Tech/AutomateAdUserProperti
 3. Run the main script:
 
     ```powershell
-    .\run.ps1 -Path "C:\windows\temp\" -FileName "CompanyID_domain.local"
-         output = C:\windows\temp\CompanyID_domain.local.csv
+    $output = .\run.ps1 -Path "C:\windows\temp\" -FileName "CompanyID_domain.local"
+    notepad $output
     ```
 
 
