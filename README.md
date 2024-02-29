@@ -4,12 +4,12 @@ This project gathers all AD users and properties and outputs the information to 
 
 ## Usage
 
-1. Open PowerShell and navigate to the project directory:
+1. Open PowerShell and change to temp directory:
 
     ```powershell
     cd C:\Windows\Temp
     ```
-2. Download code locally:
+2. Download local:
 
 ```powershell
 # PSVersion5+
