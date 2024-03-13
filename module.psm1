@@ -13,7 +13,7 @@
     The name of the CSV file.
 
 .EXAMPLE
-    Get-AdUsers -Path "C:\Users\NKranz\Documents" -FileName "ADUsers"
+    Get-AdUsers -Path "C:\Users\testuser\Documents" -FileName "ADUsers"
 
     This example retrieves all Active Directory users and exports their information to a CSV file named "ADUsers.csv" in the "C:\Users\NKranz\Documents" directory.
 
