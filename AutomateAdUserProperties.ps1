@@ -5,10 +5,10 @@ param (
 
 Try {
     # Import the custom module
-    Import-Module ($Path + "module.psm1")
+    Import-Module $("{0}{1}"-f $Path, "module.psm1") -Force
 }
 catch {
-    exit 1
+    Write-Host "Error: $_"
 }
 
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls1
