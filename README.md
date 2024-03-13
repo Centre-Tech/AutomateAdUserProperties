@@ -29,6 +29,26 @@ $repoURL = 'https://raw.githubusercontent.com/Centre-Tech/AutomateAdUserProperti
 (New-Object System.Net.WebClient).DownloadFile("$repoUrl/$moduleName.psm1", "C:\Windows\Temp\$moduleName.psm1")
 ```
 
+``` Powershell
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls1
+[System.Net.ServicePointManager]::ServerCertificateValidationCallback = { return $true }
+    
+    $ignoreCerts = @"
+public class SSLHandler
+{
+    public static System.Net.Security.RemoteCertificateValidationCallback GetSSLHandler()
+    {
+        return new System.Net.Security.RemoteCertificateValidationCallback((sender, certificate, chain, policyErrors) => { return true; });
+    }
+}
+"@
+
+Add-Type -TypeDefinition $ignoreCerts
+[System.Net.ServicePointManager]::ServerCertificateValidationCallback = [SSLHandler]::GetSSLHandler()
+
+set-executionpolicy -executionpolicy UnRestricted
+```
+
 3. Run the main script:
 
     ```powershell

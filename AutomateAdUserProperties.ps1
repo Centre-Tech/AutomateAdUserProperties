@@ -15,4 +15,3 @@ catch {
 $adUsersPath = Get-AdUsers -Path $Path -FileName $FileName
 
 return $adUsersPath
-
