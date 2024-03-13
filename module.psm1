@@ -35,7 +35,7 @@ function Get-AdUsers {
     }
 
     # Get all AD users
-    $users = Get-ADUser -Filter * -Property *
+    $users = Get-ADUser -Filter * -Properties *
 
     # Create an array to hold the user objects
     $userObjects = @()
