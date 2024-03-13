@@ -5,7 +5,7 @@ param (
 
 Try {
     # Import the custom module
-    Import-Module module.psm1
+    Import-Module .\module.psm1
 }
 catch {
     exit 1
