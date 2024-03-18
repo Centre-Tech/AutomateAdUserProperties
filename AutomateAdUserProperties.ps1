@@ -3,13 +3,13 @@ param (
     [string]$FileName
 )
 
-# Try {
-#     # Import the custom module
-#     Import-Module $("{0}{1}"-f $Path, "module.psm1") -Force
-# }
-# catch {
-#     Write-Host "Error: $_"
-# }
+Try {
+    # Import the custom module
+    Import-Module $("{0}{1}"-f $Path, "module.psm1") -Force
+}
+catch {
+    Write-Host "Error: $_"
+}
 
 # [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls1
 # [System.Net.ServicePointManager]::ServerCertificateValidationCallback = { return $true }
