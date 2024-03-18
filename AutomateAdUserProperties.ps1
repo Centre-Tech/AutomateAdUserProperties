@@ -5,7 +5,7 @@ param (
 
 Try {
     # Import the custom module
-    Import-Module $("{0}{1}"-f $Path, "module.psm1") -Force
+    Import-Module ".\module.psm1" -Force
 }
 catch {
     Write-Host "Error: $_"
