@@ -9,7 +9,7 @@ Try {
 }
 catch {
     Write-Host "Error: $_"
-}
+ }
 
 # [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls1
 # [System.Net.ServicePointManager]::ServerCertificateValidationCallback = { return $true }

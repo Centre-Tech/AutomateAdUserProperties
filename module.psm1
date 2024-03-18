@@ -55,7 +55,7 @@ function Get-AdUsers {
 
     # Construct the full file path
 
-    $fullPath = ("{0}{1}.csv"-f $Path, $FileName)
+    $fullPath = $("{0}{1}.csv"-f $Path, $FileName)
     #$fullPath = Join-Path -Path $Path -ChildPath "$FileName.csv"
 
     # Output the array of user objects to the specified file
